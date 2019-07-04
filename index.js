@@ -21,6 +21,9 @@ function viewCart() {
     return "Your shopping cart is empty."
   } else {
     var complicatedMessage = "In your cart, you have "
+    if (cart.length === 1){
+      complicatedMessage += `${cart[cartIndex].itemName} at $${cart[cartIndex].itemPrice}.`
+    } else {
     for (let cartIndex = 0; cartIndex < cart.length - 1; cartIndex++){
       // stop the loop right before the last element so we can type "and" and finish with a period.
       complicatedMessage += `${cart[cartIndex].itemName} at $${cart[cartIndex].itemPrice}, `
@@ -28,6 +31,7 @@ function viewCart() {
     complicatedMessage += `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
     // look at the last element and add the word "and" plus a period at the end.
     return complicatedMessage
+    }
   }
 }
 
