@@ -59,7 +59,6 @@ function removeFromCart(item) {
         // cut the resulting element located at index "result" and return an array with it removed
     }
 }
-}
 
 function placeOrder(cardNumber) {
     // write your code here
