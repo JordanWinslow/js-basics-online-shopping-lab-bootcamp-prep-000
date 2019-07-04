@@ -17,7 +17,14 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  
+  if (!cart) {
+    return "Your shopping cart is empty."
+  } else {
+    var tempArray = []
+    for (let cartIndex = 0; cartIndex < cart.length; cartIndex++){
+      tempArray[cartIndex] = 
+    }
+  }
 }
 
 function total() {
