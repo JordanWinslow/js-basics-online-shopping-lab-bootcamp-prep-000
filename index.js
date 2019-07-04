@@ -39,7 +39,13 @@ function viewCart() {
 }
 
 function total() {
-  
+    var totalCost = 0
+    for (let cartIndex = 0; cartIndex < cart.length; cartIndex++) {
+        totalCost += cart[cartIndex].itemPrice
+        // add the current index price to the variable "totalCost"
+    }
+
+    return totalCost
 }
 
 function removeFromCart(item) {
