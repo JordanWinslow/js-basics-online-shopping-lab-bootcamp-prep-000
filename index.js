@@ -26,7 +26,7 @@ function viewCart() {
       allCartNames[cartIndex] = cart[cartIndex].itemName
       allCartPrices[cartIndex] = cart[cartIndex].itemPrice
     }
-    return `In your cart, you have ${allCartNames.join
+    return `In your cart, you have ${allCartNames.join(" at")
   }
 }
 
