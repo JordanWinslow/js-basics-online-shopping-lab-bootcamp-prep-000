@@ -33,8 +33,6 @@ function viewCart() {
     return complicatedMessage
     }
   }
-}
-
 function total() {
   // write your code here
 }
