@@ -25,6 +25,7 @@ function viewCart() {
     } else if (cart.length === 1) {
         var complicatedMessage = "In your cart, you have "
         complicatedMessage += `${cart[0].itemName} at $${cart[0].itemPrice}.`
+        return complicatedMessage
     } else {
         var complicatedMessage = "In your cart, you have "
         for (let cartIndex = 0; cartIndex < cart.length - 1; cartIndex++) {
