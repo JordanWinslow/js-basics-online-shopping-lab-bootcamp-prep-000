@@ -20,12 +20,14 @@ function viewCart() {
   if (!cart) {
     return "Your shopping cart is empty."
   } else {
-    var tempArray = []
-    for (let cartIndex = 0; cartIndex < cart.length; cartIndex++){
-      tempArray[cartIndex] = cart[cartIndex].itemName 
-      tempArray[cartIndex + 1] = cart[cartIndex].itemPrice
+    var complicatedMessage = "In your cart, you have "
+    for (let cartIndex = 0; cartIndex < cart.length - 1; cartIndex++){
+      // stop the loop right before the last element so we can type "and" and finish with a period.
+      complicatedMessage += `${cart[cartIndex].itemName} at $${cart[cartIndex].itemPrice}, `
     }
-    return `In your cart, you have ${tempArray.join(' at')}`
+    complicatedMessage += `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
+    // look at the last element and add the word "and" plus a period at the end.
+    return complicatedMessage
   }
 }
 
