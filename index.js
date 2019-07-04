@@ -54,9 +54,9 @@ function removeFromCart(item) {
             cart.splice(cartIndex, 1)
             return cart
         }
-        // if nothing is returned then we say the following
-        return "That item is not in your cart."
     }
+    // if nothing is returned then we say the following
+    return "That item is not in your cart."
 }
 
 function placeOrder(cardNumber) {
