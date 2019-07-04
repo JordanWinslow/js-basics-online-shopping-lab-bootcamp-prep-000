@@ -49,15 +49,11 @@ function total() {
 }
 
 function removeFromCart(item) {
-    var result = cart.findIndex(function(element) {
-        return element === item
-    });
-    if (!result) {
-        return "That item is not in your cart."
-    } else {
-        return cart.splice(result, 1)
-        // cut the resulting element located at index "result" and return an array with it removed
-    }
+  for (let cartIndex = 0; cartIndex < cart.length - 1; cartIndex++){
+    if (cart[cartIndex].itemName === item){
+      return cart.splice(cartIndex, 1)
+    } else return "That item is not in your cart."
+  }
 }
 
 function placeOrder(cardNumber) {
