@@ -49,7 +49,16 @@ function total() {
 }
 
 function removeFromCart(item) {
-    // write your code here
+    var result = cart.findIndex(function(element) {
+        return element === item
+    });
+    if (!result) {
+        return "That item is not in your cart."
+    } else {
+        return cart.splice(result, 1)
+        // cut the resulting element located at index "result" and return an array with it removed
+    }
+}
 }
 
 function placeOrder(cardNumber) {
