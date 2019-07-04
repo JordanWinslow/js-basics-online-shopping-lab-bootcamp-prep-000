@@ -22,7 +22,7 @@ function viewCart() {
   } else {
     var tempArray = []
     for (let cartIndex = 0; cartIndex < cart.length; cartIndex++){
-      tempArray[cartIndex] = 
+      tempArray[cartIndex] = cart[0]
     }
   }
 }
