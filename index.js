@@ -22,11 +22,11 @@ function addToCart(item) {
 function viewCart() {
     if (cart.length === 0) {
         return "Your shopping cart is empty."
-    }
-    var complicatedMessage = "In your cart, you have "
-    if (cart.length === 1) {
+    } else if (cart.length === 1) {
+        var complicatedMessage = "In your cart, you have "
         complicatedMessage += `${cart[0].itemName} at $${cart[0].itemPrice}.`
     } else {
+        var complicatedMessage = "In your cart, you have "
         for (let cartIndex = 0; cartIndex < cart.length - 1; cartIndex++) {
             // stop the loop right before the last element so we can type "and" and finish with a period.
             complicatedMessage += `${cart[cartIndex].itemName} at $${cart[cartIndex].itemPrice}, `
