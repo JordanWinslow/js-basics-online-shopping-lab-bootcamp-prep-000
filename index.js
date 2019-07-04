@@ -20,13 +20,11 @@ function viewCart() {
   if (!cart) {
     return "Your shopping cart is empty."
   } else {
-    var allCartNames = []
-    var allCartPrices = []
     for (let cartIndex = 0; cartIndex < cart.length; cartIndex++){
       allCartNames[cartIndex] = cart[cartIndex].itemName
       allCartPrices[cartIndex] = cart[cartIndex].itemPrice
     }
-    return `In your cart, you have ${allCartNames.join(" at")
+    return `In your cart, you have
   }
 }
 
