@@ -19,7 +19,7 @@ function addToCart(item) {
 function viewCart() {
   if (cart.length === 0) {
     return "Your shopping cart is empty."
-  } else {
+  }
     var complicatedMessage = "In your cart, you have "
     if (cart.length === 1){
       complicatedMessage += `${cart[0].itemName} at $${cart[0].itemPrice}.`
