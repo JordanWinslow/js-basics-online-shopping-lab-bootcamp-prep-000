@@ -22,7 +22,7 @@ function viewCart() {
   } else {
     var complicatedMessage = "In your cart, you have "
     if (cart.length === 1){
-      complicatedMessage += `${cart[cartIndex].itemName} at $${cart[cartIndex].itemPrice}.`
+      complicatedMessage += `${cart[0].itemName} at $${cart[0].itemPrice}.`
     } else {
     for (let cartIndex = 0; cartIndex < cart.length - 1; cartIndex++){
       // stop the loop right before the last element so we can type "and" and finish with a period.
